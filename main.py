@@ -17,12 +17,10 @@ def nine():
     all_elements = []
     all_symbols = []
     for groups in ELEMENTS:
-        print(1)
         for element in ELEMENTS[groups]:
             all_elements.append(element.split(",")[0].lower())
             all_symbols.append(element.split(",")[1].lower())
     if user_input in groups:
-        print(2)
         GROUP = ELEMENTS.get(user_input, None)
         if GROUP == None:
             print("invalid group")
@@ -36,7 +34,6 @@ def nine():
             print(mystr)
 
     elif user_input in all_elements:
-        print(3)
         for x in ELEMENTS:
             for i in x:
                 if user_input == i.split(",")[0].lower():
@@ -46,14 +43,13 @@ def nine():
                     print(f"Group: {i}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
 
     elif user_input in all_symbols:
-        print(4)
         for x in ELEMENTS:
             for i in ELEMENTS[x]:
                 if user_input == i.split(",")[1].lower():
                     element = i.split(",")[0]
                     symbol = i.split(",")[1]
                     info = ELEMENTS[x][i]
-                    print(f"Group: {i}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
+                    print(f"Group: {f}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
     else:
         print("not a valid element, symbol or group!")
 
