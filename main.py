@@ -6,7 +6,7 @@ def main():
             'Sodium,Na': 'Atomic weight: 22.99',
             'Potassium,K': 'Atomic weight: 39.09',
             },
-        'halogen ': {
+        'halogen': {
             'Florine,F': 'Atomic weight: 18.99',
             'Chlorine,Cl': 'Atomic weight: 35.45',
             'Bromine,Br': 'Atomic weight: 79.9',
