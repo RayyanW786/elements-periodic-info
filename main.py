@@ -17,17 +17,16 @@ def main():
     all_symbols = []
     for groups in ELEMENTS:
         for element in ELEMENTS[groups]:
-            all_elements.append(element.split(",")[0].lower())
-            all_symbols.append(element.split(",")[1].lower())
+            _lst = element.split(",")
+            all_elements.append(_lst[0].lower())
+            all_symbols.append(_lst[1].lower())
     if user_input in groups:
-        GROUP = ELEMENTS.get(user_input, None)
-        if GROUP == None:
-            print("invalid group")
         else:
             mystr = f"Group: {user_input}\n\n"
             for x in GROUP:
-                element = x.split(",")[0]
-                symbol = x.split(",")[1]
+                _lst = x.split(",")
+                element = _lst[0]
+                symbol = _lst[1]
                 info = GROUP[x]
                 mystr += f"Element: {element}\nSymbol: {symbol}\n{info}\n\n"
             print(mystr)
@@ -35,18 +34,20 @@ def main():
     elif user_input in all_elements:
         for x in ELEMENTS:
             for i in ELEMENTS[x]:
-                if user_input == i.split(",")[0].lower():
-                    element = i.split(",")[0]
-                    symbol = i.split(",")[1]
+                _lst = i.split(",")
+                if user_input == _lst[0].lower():
+                    element = _lst[0]
+                    symbol = _lst[1]
                     info = ELEMENTS[x][i]
                     print(f"Group: {x}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
 
     elif user_input in all_symbols:
         for x in ELEMENTS:
             for i in ELEMENTS[x]:
-                if user_input == i.split(",")[1].lower():
-                    element = i.split(",")[0]
-                    symbol = i.split(",")[1]
+                _lst = i.split(",")
+                if user_input == _lst[1].lower():
+                    element = _lst[0]
+                    symbol = _lst[1]
                     info = ELEMENTS[x][i]
                     print(f"Group: {x}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
     else:
