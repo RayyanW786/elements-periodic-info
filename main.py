@@ -1,4 +1,4 @@
-def nine():
+def main():
     user_input = input("enter a element, its symbol or group").lower()
     ELEMENTS = {
         'alkali metals': {
@@ -53,4 +53,5 @@ def nine():
     else:
         print("not a valid element, symbol or group!")
 
-nine()
+if __name__ == "__main__":
+    main()
