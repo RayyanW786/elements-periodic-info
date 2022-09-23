@@ -35,12 +35,12 @@ def nine():
 
     elif user_input in all_elements:
         for x in ELEMENTS:
-            for i in x:
+            for i in ELEMENTS[x]:
                 if user_input == i.split(",")[0].lower():
                     element = i.split(",")[0]
                     symbol = i.split(",")[1]
-                    info = x[i]
-                    print(f"Group: {i}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
+                    info = ELEMENTS[x][i]
+                    print(f"Group: {x}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
 
     elif user_input in all_symbols:
         for x in ELEMENTS:
