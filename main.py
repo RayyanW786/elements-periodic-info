@@ -21,6 +21,10 @@ def main():
             all_elements.append(_lst[0].lower())
             all_symbols.append(_lst[1].lower())
     if user_input in groups:
+        GROUP = ELEMENTS.get(user_input, None)
+        if GROUP == None:
+            print("invalid group")
+        else:
             mystr = f"Group: {user_input}\n\n"
             for x in GROUP:
                 _lst = x.split(",")
