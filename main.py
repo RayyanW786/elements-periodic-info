@@ -13,7 +13,6 @@ def main():
         }
     }
     groups = ELEMENTS.keys()
-    print(groups)
     all_elements = []
     all_symbols = []
     for groups in ELEMENTS:
@@ -49,7 +48,7 @@ def main():
                     element = i.split(",")[0]
                     symbol = i.split(",")[1]
                     info = ELEMENTS[x][i]
-                    print(f"Group: {f}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
+                    print(f"Group: {x}\nElement: {element}\nSymbol: {symbol}\n{info}\n\n")
     else:
         print("not a valid element, symbol or group!")
 
